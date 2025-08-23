@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UpSkola – Personalized Tutoring</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description"
+        content="Connect with expert tutors for one-on-one sessions. Achieve your academic goals with confidence on UpSkola." />
+</head>
+
+<body>
+    <!-- ==============================
+       Header / Navigation
+  ================================ -->
+    <header id="header"></header>
+    <script>
+        fetch("/pages/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
+
+
+
+    <!-- ==============================
+       Hero Section
+  ================================ -->
+    <section class="container hero" id="home" style="padding: 20px;">
+        <div>
+            <h1>Unlock Smarter Learning</h1>
+            <h1>Connect with the Right Tutor, Anytime.</h1>
+            <p class="lead">Access top tutors for personalized sessions in every subject. Build confidence as you reach
+                your academic goals.</p>
+            <div class="cta">
+                <a class="btn btn-primary" href="#tutors">Find a Tutor</a>
+                <a class="btn btn-outline" href="#become">Become a Tutor</a>
+            </div>
+        </div>
+        <div class="illus" aria-hidden="true">
+            <!-- Decorative, friendly illustration (pure SVG so no external assets) -->
+            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#f3f7ff" />
+                        <stop offset="1" stop-color="#e6eeff" />
+                    </linearGradient>
+                </defs>
+                <rect x="24" y="24" width="752" height="552" rx="18" fill="url(#g1)" stroke="#e7ecf6" />
+                <!-- desk -->
+                <rect x="120" y="430" width="560" height="18" rx="9" fill="#dfe8ff" />
+                <rect x="90" y="448" width="620" height="14" rx="7" fill="#cfdcff" />
+                <!-- laptop -->
+                <rect x="430" y="360" width="150" height="95" rx="10" fill="#2747a8" opacity=".9" />
+                <rect x="440" y="370" width="130" height="70" rx="8" fill="#f9fbff" />
+                <rect x="460" y="452" width="90" height="6" rx="3" fill="#a9b8ff" />
+                <!-- characters as simple shapes -->
+                <circle cx="285" cy="330" r="40" fill="#ffc4bf" />
+                <rect x="240" y="360" width="100" height="70" rx="14" fill="#79a0ff" />
+                <circle cx="530" cy="290" r="38" fill="#ffd6a3" />
+                <rect x="500" y="320" width="90" height="60" rx="12" fill="#00c2a8" />
+                <!-- plants -->
+                <ellipse cx="180" cy="470" rx="40" ry="16" fill="#d4efea" />
+                <path d="M170 470c-10-40 30-70 30-70-4 22 2 40 12 58" fill="#6ed9c7" />
+                <ellipse cx="640" cy="470" rx="44" ry="16" fill="#d4efea" />
+                <path d="M640 470c8-42-22-72-22-72 2 23-4 39-12 59" fill="#6ed9c7" />
+                <!-- shelf + frames -->
+                <rect x="610" y="120" width="120" height="12" rx="6" fill="#cdd8f7" />
+                <rect x="640" y="90" width="50" height="30" rx="6" fill="#ffe7a6" />
+                <rect x="580" y="160" width="60" height="40" rx="8" fill="#ffd6e7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==============================
+       Meet Our Top Tutors
+  ================================ -->
+    <section class="section" id="tutors">
+        <div class="container">
+            <h2 style="text-align:center">Meet Our Top Tutors</h2>
+            <p class="muted" style="text-align:center;margin-top:.2rem">Explore top-rated tutors, chosen for their skill
+                and commitment to your success. Connect with trusted tutors dedicated to guiding your academic journey.
+            </p>
+
+            <div class="tutors-grid">
+                <!-- Tutor 1 -->
+                <article class="card tutor" aria-label="Tutor: Dr. Evelyn Reed">
+                    <div class="avatar"><span class="status" title="Online"></span></div>
+                    <h4>Dr. Evelyn Reed</h4>
+                    <div class="subject">Advanced Physics</div>
+                    <div class="rating">
+                        <span class="stars" aria-label="4.9 out of 5 stars">
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".5">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                        </span>
+                        <span class="muted">4.9 (187 reviews)</span>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Quantum Mechanics</span>
+                        <span class="chip">Thermodynamics</span>
+                        <span class="chip">Problem Solving</span>
+                    </div>
+                    <a class="btn btn-outline" href="#">View Profile</a>
+                </article>
+
+                <!-- Tutor 2 -->
+                <article class="card tutor" aria-label="Tutor: Prof. David Chen">
+                    <div class="avatar"><span class="status" title="Online"></span></div>
+                    <h4>Prof. David Chen</h4>
+                    <div class="subject">Calculus &amp; Algebra</div>
+                    <div class="rating">
+                        <span class="stars" aria-label="4.8 out of 5 stars">
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".5">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                        </span>
+                        <span class="muted">4.8 (210 reviews)</span>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">AP Calculus</span>
+                        <span class="chip">Linear Algebra</span>
+                        <span class="chip">Exam Prep</span>
+                    </div>
+                    <a class="btn btn-outline" href="#">View Profile</a>
+                </article>
+
+                <!-- Tutor 3 -->
+                <article class="card tutor" aria-label="Tutor: Ms. Sarah Jones">
+                    <div class="avatar"><span class="status" title="Online"></span></div>
+                    <h4>Ms. Sarah Jones</h4>
+                    <div class="subject">English Literature</div>
+                    <div class="rating">
+                        <span class="stars" aria-label="4.7 out of 5 stars">
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".2">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                        </span>
+                        <span class="muted">4.7 (155 reviews)</span>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Creative Writing</span>
+                        <span class="chip">Essay Editing</span>
+                        <span class="chip">Literary Analysis</span>
+                    </div>
+                    <a class="btn btn-outline" href="#">View Profile</a>
+                </article>
+
+                <!-- Tutor 4 -->
+                <article class="card tutor" aria-label="Tutor: Mr. Alex Sharma">
+                    <div class="avatar"><span class="status" title="Online"></span></div>
+                    <h4>Mr. Alex Sharma</h4>
+                    <div class="subject">Computer Science</div>
+                    <div class="rating">
+                        <span class="stars" aria-label="4.9 out of 5 stars">
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".2">
+                                <path
+                                    d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                            </svg>
+                        </span>
+                        <span class="muted">4.9 (192 reviews)</span>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Python</span>
+                        <span class="chip">Data Structures</span>
+                        <span class="chip">Algorithms</span>
+                    </div>
+                    <a class="btn btn-outline" href="#">View Profile</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+       Why Choose UpSkola
+  ================================ -->
+    <section class="section" id="features" style="padding-top:40px">
+        <div class="container">
+            <h2 style="text-align:center">The UpSkola Advantage</h2>
+            <p class="muted" style="text-align:center;margin-top:.2rem">Empower your learning journey with
+                individualized support from skilled tutors.</p>
+
+            <div class="features-grid">
+                <article class="card feature">
+                    <div class="icon" aria-hidden="true">
+                        <!-- book icon -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M4 4v15.5A2.5 2.5 0 0 0 6.5 22H20V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z" />
+                        </svg>
+                    </div>
+                    <h3>Personalized Learning</h3>
+                    <p class="muted">Enjoy personalized instruction and feedback that adapts to your learning style,
+                        helping you achieve stronger comprehension and consistent improvement.</p>
+                </article>
+                <article class="card feature">
+                    <div class="icon" aria-hidden="true">
+                        <!-- users icon -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Expert Tutors</h3>
+                    <p class="muted">Connect with verified educators and subject matter experts from top universities,
+                        ready to guide you through any academic challenge.</p>
+                </article>
+                <article class="card feature">
+                    <div class="icon" aria-hidden="true">
+                        <!-- clock icon -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p class="muted">Learn on your terms with around-the-clock session availability, no matter where you
+                        are.</p>
+                </article>
+                <article class="card feature">
+                    <div class="icon" aria-hidden="true">
+                        <!-- shield check icon -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Guaranteed Results</h3>
+                    <p class="muted">Through structured strategies and committed support, students achieve stronger
+                        results and lasting confidence.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+       Testimonials
+  ================================ -->
+    <section class="section" id="testimonials" style="padding-top:36px">
+        <div class="container">
+            <h2 style="text-align:center">Hear From Our Students</h2>
+            <p class="muted" style="text-align:center;margin-top:.2rem">See how learners in our community are
+                transforming their studies with UpSkola.</p>
+
+            <div class="testimonials-grid">
+                <article class="card testimonial">
+                    <div class="person">
+                        <div class="avatar-sm"></div>
+                        <div>
+                            <div style="font-weight:700">Emily R.</div>
+                            <div class="muted" style="font-size:.85rem">High School Student</div>
+                        </div>
+                    </div>
+                    <div class="stars" style="margin-top:8px">
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".4">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                    </div>
+                    <p class="quote">“My math grades improved so much thanks to UpSkola! My tutor made complex topics
+                        easy to understand and was always patient.”</p>
+                </article>
+                <article class="card testimonial">
+                    <div class="person">
+                        <div class="avatar-sm"></div>
+                        <div>
+                            <div style="font-weight:700">Michael T.</div>
+                            <div class="muted" style="font-size:.85rem">University Freshman</div>
+                        </div>
+                    </div>
+                    <div class="stars" style="margin-top:8px">
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".4">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                    </div>
+                    <p class="quote">“The physics tutor was incredibly knowledgeable. I finally grasped concepts I
+                        struggled with for weeks. Highly recommend!”</p>
+                </article>
+                <article class="card testimonial">
+                    <div class="person">
+                        <div class="avatar-sm"></div>
+                        <div>
+                            <div style="font-weight:700">Sophia L.</div>
+                            <div class="muted" style="font-size:.85rem">Parent</div>
+                        </div>
+                    </div>
+                    <div class="stars" style="margin-top:8px">
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor" opacity=".4">
+                            <path
+                                d="m12 2 3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.77 5.82 21l1.18-6.87-5-4.87 6.91-1z" />
+                        </svg>
+                    </div>
+                    <p class="quote">“UpSkola made finding a qualified tutor so simple. My daughter's confidence in
+                        English has soared. Fantastic service!”</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+       CTA Band
+  ================================ -->
+    <section class="section" style="padding-top:20px">
+        <div class="container" style="text-align: center; align-content: center;">
+            <div class="cta-band">
+                <div class="strip" aria-hidden="true"></div>
+                <h2>Ready to Excel?</h2>
+                <p class="muted" style="color:#eaf0ff;opacity:.95">Join thousands of students achieving their academic
+                    dreams with UpSkola.</p>
+                <form style="display: flex;justify-content: center;" class="cta-actions"
+                    onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');">
+                    <input id="email" type="email" placeholder="Enter your email" required />
+                    <button class="btn btn-primary" style="background-color: white; color: black;" type="submit">Get
+                        Started
+                        Today</button>
+                </form>
+                <div class="cta-small">Unlock a world of learning opportunities tailored just for you.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+       Footer
+  ================================ -->
+    <footer id="footer"></footer>
+    <script>
+        fetch("/pages/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
+
+
+    <script>
+        // tiny enhancement – current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

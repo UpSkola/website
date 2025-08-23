@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect - How It Works</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+    body {color: #333; line-height: 1.6;}
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: #fff; border-bottom: 1px solid #eee;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    .logo {font-weight: bold; font-size: 1.2rem; color: #2563eb;}
+    nav {display: flex; align-items: center; gap: 1.5rem;}
+    nav a {text-decoration: none; color: #333; font-weight: 500;}
+    nav a.active {color: #2563eb;}
+    .search-bar {padding: 0.4rem 0.6rem; border: 1px solid #ccc; border-radius: 6px;}
+    .btn {padding: 0.5rem 1rem; border-radius: 6px; border: none; cursor: pointer;}
+    .btn-login {background: transparent; border: 1px solid #ccc;}
+    .btn-signup {background: #2563eb; color: #fff;}
+    
+    /* Mobile menu */
+    .menu-toggle {display: none; flex-direction: column; cursor: pointer; gap: 4px;}
+    .menu-toggle span {width: 25px; height: 3px; background: #333;}
+    .drawer {
+      position: fixed; top: 0; right: -260px; width: 260px; height: 100%;
+      background: #fff; box-shadow: -2px 0 6px rgba(0,0,0,0.1);
+      padding: 2rem 1rem; transition: right 0.3s ease;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .drawer.active {right: 0;}
+    .drawer a {color: #333; text-decoration: none; font-weight: 500;}
+    .drawer .search-bar {width: 100%;}
+
+    /* Hero */
+    .hero {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 3rem 2rem; background: #f8fbff;
+      flex-wrap: wrap;
+    }
+    .hero-text {flex: 1; min-width: 300px;}
+    .hero-text h1 {font-size: 2.5rem; margin-bottom: 1rem;}
+    .hero-text p {margin-bottom: 1.5rem;}
+    .hero-text .btn-primary {background: #2563eb; color: #fff;}
+    .hero-text .btn-outline {border: 1px solid #2563eb; background: transparent; color: #2563eb;}
+    .hero-img {flex: 1; min-width: 280px; text-align: center;}
+    .hero-img img {max-width: 100%; height: auto;}
+
+    /* Steps */
+    .steps {padding: 4rem 2rem; text-align: center;}
+    .steps h2 {font-size: 2rem; margin-bottom: 1rem;}
+    .steps p {color: #666; margin-bottom: 2rem;}
+    .step-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .step {
+      background: #fff; border: 1px solid #eee; border-radius: 12px;
+      padding: 1.5rem; text-align: center;
+    }
+    .step h3 {margin: 0.5rem 0; font-size: 1.2rem;}
+
+    /* CTA */
+    .cta {
+      padding: 3rem 2rem; background: #f8fbff; text-align: center;
+    }
+    .cta h2 {margin-bottom: 1rem;}
+    .cta input {padding: 0.6rem; border: 1px solid #ccc; border-radius: 6px; width: 250px; margin-right: 0.5rem;}
+    .cta button {padding: 0.6rem 1.2rem; background: #2563eb; border: none; color: #fff; border-radius: 6px; cursor: pointer;}
+
+    /* Footer */
+    footer {
+      background: #fff; border-top: 1px solid #eee; padding: 3rem 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+    footer h4 {margin-bottom: 1rem; font-size: 1rem;}
+    footer a {display: block; color: #333; text-decoration: none; margin-bottom: 0.4rem; font-size: 0.9rem;}
+    footer .subscribe {display: flex; flex-direction: column; gap: 0.6rem;}
+    footer input {padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px;}
+    footer button {padding: 0.5rem; border: none; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer;}
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      nav {display: none;}
+      .menu-toggle {display: flex;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" class="active">How It Works</a>
+      <a href="#">Subjects</a>
+      <a href="#">Contact</a>
+      <input type="text" class="search-bar" placeholder="Search tutors...">
+      <button class="btn btn-login">Log In</button>
+      <button class="btn btn-signup">Sign Up</button>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawerMenu">
+    <a href="#">Home</a>
+    <a href="#" class="active">How It Works</a>
+    <a href="#">Subjects</a>
+    <a href="#">Contact</a>
+    <input type="text" class="search-bar" placeholder="Search tutors...">
+    <button class="btn btn-login">Log In</button>
+    <button class="btn btn-signup">Sign Up</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering Your Learning Journey.</h1>
+      <p>Discover a clear path to academic excellence with our personalized online tutoring. See how easy it is to start.</p>
+      <button class="btn btn-primary">Find a Tutor</button>
+      <button class="btn btn-outline">Become a Tutor</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/400x250" alt="Students illustration">
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="steps">
+    <h2>Our Simple Process</h2>
+    <p>Getting started with EduConnect is designed to be straightforward and hassle-free. Follow these easy steps to connect with your perfect tutor.</p>
+    <div class="step-grid">
+      <div class="step">
+        <h2>1</h2>
+        <h3>Sign Up & Create Your Profile</h3>
+        <p>Begin your journey by quickly signing up and telling us about your learning goals and preferences.</p>
+      </div>
+      <div class="step">
+        <h2>2</h2>
+        <h3>Discover Your Ideal Tutor</h3>
+        <p>Browse through our extensive network of expert tutors. Filter by subject, rating, and availability.</p>
+      </div>
+      <div class="step">
+        <h2>3</h2>
+        <h3>Schedule Flexible Sessions</h3>
+        <p>Book one-on-one sessions at times that fit your busy schedule, with 24/7 availability.</p>
+      </div>
+      <div class="step">
+        <h2>4</h2>
+        <h3>Start Learning & Achieving</h3>
+        <p>Connect with your tutor online, receive lessons, and watch your performance soar!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Start Learning?</h2>
+    <p>Join thousands of students who are achieving their academic goals with EduConnect.</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Get Started Today</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <div class="logo">Logo</div>
+      <p>Your trusted partner for personalized online tutoring and academic success.</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Blog</a>
+    </div>
+    <div>
+      <h4>Subjects</h4>
+      <a href="#">Math</a>
+      <a href="#">Science</a>
+      <a href="#">English</a>
+      <a href="#">History</a>
+      <a href="#">Programming</a>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <a href="#">FAQ</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Help Center</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div>
+      <h4>For Tutors</h4>
+      <a href="#">Become a Tutor</a>
+      <a href="#">Tutor Resources</a>
+      <a href="#">Tutor Login</a>
+    </div>
+    <div class="subscribe">
+      <h4>Stay Connected</h4>
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const drawer = document.getElementById('drawerMenu');
+    toggle.addEventListener('click', () => {
+      drawer.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

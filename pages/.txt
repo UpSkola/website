@@ -1,0 +1,78 @@
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div>
+                <div class="brand" style="margin-bottom:10px">
+                    <span class="brand-mark"></span>
+                    <span>UpSkola</span>
+                </div>
+                <p class="muted" style="max-width:36ch">Your reliable gateway to tailored tutoring and lasting academic
+                    achievement.</p>
+                <div class="social" aria-label="Social links">
+                    <a href="#" class="soc" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#263a6b" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="soc" aria-label="Twitter">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#263a6b" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="soc" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#263a6b" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="soc" aria-label="LinkedIn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#263a6b" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cols">
+            <div>
+                <div class="f-title">Company</div>
+                <ul class="f-list">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="f-title">Subjects</div>
+                <ul class="f-list">
+                    <li><a href="#">Math</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="f-title">Support</div>
+                <ul class="f-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="f-title">For Tutors</div>
+                <ul class="f-list">
+                    <li><a href="#">Become a Tutor</a></li>
+                    <li><a href="#">Tutor Resources</a></li>
+                    <li><a href="#">Tutor Login</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">© <span id="year"></span> UpSkola. All rights reserved.</div>
+    </div>
+</footer>

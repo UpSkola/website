@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - How It Works</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Empowering Your Learning Journey.</h1>
+            <p>Discover a clear path to academic excellence with our personalized online tutoring. See how easy it is to
+                start.</p>
+            <button class="btn btn-primary">Find a Tutor</button>
+            <button class="btn btn-outline">Become a Tutor</button>
+        </div>
+        <div class="hero-img">
+            <img src="https://via.placeholder.com/400x250" alt="Students illustration">
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps">
+        <h2>Our Simple Process</h2>
+        <p>Getting started with EduConnect is designed to be straightforward and hassle-free. Follow these easy steps to
+            connect with your perfect tutor.</p>
+        <div class="step-grid">
+            <div class="step">
+                <h2>1</h2>
+                <h3>Sign Up & Create Your Profile</h3>
+                <p>Begin your journey by quickly signing up and telling us about your learning goals and preferences.
+                </p>
+            </div>
+            <div class="step">
+                <h2>2</h2>
+                <h3>Discover Your Ideal Tutor</h3>
+                <p>Browse through our extensive network of expert tutors. Filter by subject, rating, and availability.
+                </p>
+            </div>
+            <div class="step">
+                <h2>3</h2>
+                <h3>Schedule Flexible Sessions</h3>
+                <p>Book one-on-one sessions at times that fit your busy schedule, with 24/7 availability.</p>
+            </div>
+            <div class="step">
+                <h2>4</h2>
+                <h3>Start Learning & Achieving</h3>
+                <p>Connect with your tutor online, receive lessons, and watch your performance soar!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to Start Learning?</h2>
+        <p>Join thousands of students who are achieving their academic goals with EduConnect.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Get Started Today</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
+
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const drawer = document.getElementById('drawerMenu');
+        toggle.addEventListener('click', () => {
+            drawer.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
