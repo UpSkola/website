@@ -1,1 +1,1 @@
-Official webiste for UpSkola
+Official website for UpSkola
